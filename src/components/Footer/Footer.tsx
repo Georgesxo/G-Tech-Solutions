@@ -17,10 +17,12 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }
-  }
+    transition: {
+      duration: 0.7,
+      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
+    },
+  },
 }
-
 const columnVariant = {
   hidden: { opacity: 0, y: 50 },
   visible: (index: number) => ({
@@ -29,7 +31,7 @@ const columnVariant = {
     transition: {
       duration: 0.7,
       delay: index * 0.12,
-      ease: [0.25, 0.46, 0.45, 0.94]
+     ease: [0.25, 0.1, 0.25, 1] as const
     }
   })
 }
@@ -168,7 +170,9 @@ export function Footer() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3 }}
-      >
+            variants={fadeUp}     
+             >
+        
         <div className="footer-bottom-container">
           <p className="copyright">
             &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.

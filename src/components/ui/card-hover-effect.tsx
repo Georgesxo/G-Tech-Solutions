@@ -1,7 +1,6 @@
-import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'motion/react'
 import { useState, useRef } from 'react'
-
+import { useProfessionalCardHover } from '../../hooks/useProfessionalCardHover'
 export const HoverEffect = ({
   items,
   className,
@@ -163,17 +162,6 @@ export const CardDescription = ({
   )
 }
 
-// Professional Card Hover Effect Hook
-export const useProfessionalCardHover = () => {
-  const [isHovered, setIsHovered] = useState(false)
-
-  return {
-    isHovered,
-    onMouseEnter: () => setIsHovered(true),
-    onMouseLeave: () => setIsHovered(false),
-  }
-}
-
 // Generic Card Wrapper with Enhanced Hover
 export const EnhancedCard = ({
   children,
@@ -186,7 +174,11 @@ export const EnhancedCard = ({
   onClick?: () => void
   style?: React.CSSProperties
 }) => {
-  const [isHovered, setIsHovered] = useState(false)
+  const {
+  isHovered,
+  onMouseEnter,
+  onMouseLeave,
+} = useProfessionalCardHover()
   const cardRef = useRef<HTMLDivElement>(null)
 
   return (
@@ -200,8 +192,8 @@ export const EnhancedCard = ({
         ...style,
       }}
       className={className}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+     onMouseEnter={onMouseEnter}
+onMouseLeave={onMouseLeave}
       onClick={onClick}
       whileHover={{ y: -8 }}
     >
