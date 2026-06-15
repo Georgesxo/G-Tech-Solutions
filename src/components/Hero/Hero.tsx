@@ -245,7 +245,7 @@ export function Hero({ onGetStartedClick }: HeroProps) {
           variants={staggerContainer}
         >
           <motion.span className="section-badge section-badge--accent" variants={staggerItem}>Why Us</motion.span>
-          <motion.h2 variants={staggerItem}>Why Choose <span className="gradient-text">G-Tech Solutions</span>?</motion.h2>
+          <motion.h2 variants={staggerItem}>Why Choose <span className="gradient-text">G-Tech Freelancers</span>?</motion.h2>
           <motion.p className="wcu-subtitle" variants={staggerItem}>We deliver exceptional results through expertise and dedication</motion.p>
           
           <div className={`wcu-grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2'}`}>

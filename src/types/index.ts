@@ -8,6 +8,7 @@ export interface Professional {
   experience: string
   skills: string[]
   bio: string
+  LinkedIn?: string
 }
 
 export interface Service {
@@ -15,4 +16,5 @@ export interface Service {
   icon: string
   title: string
   description: string
+LinkedIn?: string
 }

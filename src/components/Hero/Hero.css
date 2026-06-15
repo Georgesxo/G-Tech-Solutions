@@ -104,6 +104,7 @@
   font-family: var(--font-body);
   letter-spacing: 0.03em;
   animation: fadeInUp 0.8s ease 0.1s backwards;
+    margin-top:3%;
 }
 
 .hero-title {
@@ -486,7 +487,7 @@
   .hero-banner {
     min-height: auto;
     padding: 8rem 0 3rem;
-    padding-top: var(--page-top-offset); /* = header height + top offset + 16px ≈ 90px */
+    margin-top: -20%/* = header height + top offset + 16px ≈ 90px */
   }
 
   .hero-content {

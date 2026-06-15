@@ -179,7 +179,9 @@
   margin: 3rem 0;
 }
 
-/* Clients Section */
+/* ============================================
+   Clients Section
+   ============================================ */
 .clients-section {
   text-align: center;
 }
@@ -193,31 +195,50 @@
   margin-bottom: 2rem;
 }
 
+/* CHANGED: switched from auto-fit grid to flex-wrap so items never
+   overflow the container and the last logo isn't clipped. */
 .client-logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
+/* .client-logo-card — the class the CarouselItem div actually uses.
+   Previously the CSS only had .client-logo so nothing was applied. */
+.client-logo-card,
 .client-logo {
-  padding: 1.5rem;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.875rem 1.5rem;
+  background: #ffffff;                        /* explicit white so it shows against the section bg */
+  border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* subtle lift */
   font-weight: 600;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  transition: all var(--transition);
+  text-align: center;
+  white-space: nowrap;
   cursor: default;
+  transition: all var(--transition);
 }
 
+.client-logo-card:hover,
 .client-logo:hover {
-  border-color: rgba(0, 212, 170, 0.3);
-  background: rgba(0, 212, 170, 0.02);
-  box-shadow: 0 4px 12px rgba(0, 212, 170, 0.05);
+  border-color: rgba(0, 212, 170, 0.35);
+  background: rgba(0, 212, 170, 0.03);
+  box-shadow: 0 4px 16px rgba(0, 212, 170, 0.10);
+  color: var(--primary);
+  transform: translateY(-2px);
 }
 
-/* Responsive */
+/* ============================================
+   Responsive
+   ============================================ */
 @media (max-width: 1024px) {
   .proof-container {
     padding: 0 var(--spacing-lg);
@@ -230,10 +251,6 @@
 
   .proof-card {
     padding: 2rem;
-  }
-
-  .client-logos {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -271,8 +288,9 @@
     font-size: 2rem;
   }
 
-  .client-logos {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  /* On small screens, two per row */
+  .client-logo {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
   }
 }

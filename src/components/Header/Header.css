@@ -20,6 +20,16 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
   transition: box-shadow 0.3s ease;
 }
+/* Desktop only */
+@media (min-width: 1024px) {
+  .header {
+    left: 50%;
+    right: auto;
+    width: 90%;
+    max-width: 1100px; /* adjust as needed */
+    transform: translateX(-50%);
+  }
+}
  
 .header--scrolled {
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
@@ -145,13 +155,6 @@
   background: rgba(13, 27, 46, 0.13);
 }
  
-/* ============================================================
-   FIX #3 + #4 — MOBILE NAV full-screen overlay
-   inset: 0        → starts at top: 0, covers the pill header
-   z-index: 1001   → renders above the header's z-index: 1000
-   No backdrop-filter on .header to avoid making fixed children
-   relative to the header element instead of the viewport.
-   ============================================================ */
 .mobile-nav {
   position: fixed;
   inset: 0;                          /* FIX #4: covers entire viewport, no white gap */

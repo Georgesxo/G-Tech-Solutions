@@ -44,16 +44,16 @@ const proofItems: ProofItem[] = [
 ]
 
 const clientLogos = [
-  'TechCorp',
-  'DataFlow',
-  'InnovateLabs',
-  'GlobalHub',
-  'ProScale',
-  'NextGen',
-  'CloudBase',
-  'NexaGroup',
-  'Orbitix',
-  'StackWave',
+  'ALX Ghana',
+  'AgentSix Ai',
+  'Sarina Real Estate',
+  'Kortex Ai',
+  'Scent of Millien',
+  'YEA Africa',
+  'Teaspressa',
+  'BrainLab Ai',
+  'Forevermore Family',
+  'Niche Cocoa',
 ]
 
 // Animation variants

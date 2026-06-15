@@ -4,6 +4,7 @@ import { Hero } from './components/Hero/Hero'
 import { ProfessionalSection } from './components/ProfessionalSection/ProfessionalSection'
 import { ProfileDetail } from './components/ProfileDetail/ProfileDetail'
 import { SocialProof } from './components/SocialProof/SocialProof'
+import { Testimonials } from './components/TestimonialsSection/Testimonials'
 import { ContactSection } from './components/ContactSection/ContactSection'
 import { Footer } from './components/Footer/Footer'
 import type { Professional } from './types'
@@ -50,6 +51,7 @@ function App() {
         <Hero onGetStartedClick={handleGetStartedClick} />
         <ProfessionalSection onProfessionalClick={setSelectedProfessional} />
         <SocialProof />
+        <Testimonials />
         <ContactSection />
       </main>
 

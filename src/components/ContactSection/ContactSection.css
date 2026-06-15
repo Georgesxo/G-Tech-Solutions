@@ -63,7 +63,7 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--primary);
-  margin: 0;
+  margin: 12px;
 }
 
 .contact-intro {

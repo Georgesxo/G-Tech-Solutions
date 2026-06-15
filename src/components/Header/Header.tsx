@@ -51,8 +51,8 @@ export function Header({
             className="logo"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <img src="/images/logo.png" alt="G-Tech Solutions Logo" className="logo-image" />
-            <span className="company-name">G-Tech Solutions</span>
+            <img src="/images/logo.png" alt="G-Tech Freelancers Logo" className="logo-image" />
+            <span className="company-name">G-Tech Freelancers</span>
           </a>
         </div>
 
@@ -87,10 +87,10 @@ export function Header({
                   >
                     <img
                       src="/images/logo.png"
-                      alt="G-Tech Solutions Logo"
+                      alt="G-Tech Freelancers Logo"
                       className="mobile-nav-logo-image"
                     />
-                    <span className="mobile-nav-logo-name">G-Tech Solutions</span>
+                    <span className="mobile-nav-logo-name">G-Tech Freelancers</span>
                   </a>
                   <button
                     className="mobile-nav-close"

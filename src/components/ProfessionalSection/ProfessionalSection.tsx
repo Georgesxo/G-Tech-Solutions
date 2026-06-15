@@ -136,7 +136,11 @@ export function ProfessionalSection({ onProfessionalClick }: ProfessionalSection
                 </motion.p>
                 <p className="professional-specialization">{professional.specialization}</p>
                 <p className="professional-description">{professional.description}</p>
-                
+                <p className="professional-LinkedIn">
+                  <a href={professional.LinkedIn} target="_blank" rel="noopener noreferrer">
+                    View LinkedIn Profile
+                  </a>
+                </p>
                 <div className="professional-experience">
                   <span className="experience-badge">{professional.experience} Experience</span>
                 </div>

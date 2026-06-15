@@ -5,3 +5,4 @@ export { ProfileDetail } from './ProfileDetail/ProfileDetail'
 export { ContactSection } from './ContactSection/ContactSection'
 export { SocialProof } from './SocialProof/SocialProof'
 export { Footer } from './Footer/Footer'
+
