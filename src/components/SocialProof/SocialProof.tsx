@@ -25,7 +25,7 @@ const proofItems: ProofItem[] = [
   },
   {
     icon: <Users size={32} />,
-    stat: '500+',
+    stat: '50+',
     label: 'Clients Served',
     description: 'Across 25+ countries'
   },

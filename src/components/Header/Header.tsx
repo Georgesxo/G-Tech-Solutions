@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { useIsMobile } from '../../hooks/useIsMobile'
@@ -5,15 +6,11 @@ import '../Header/Header.css'
 
 interface HeaderProps {
   onProfessionalsClick: () => void
-  onAboutClick: () => void
-  onServicesClick: () => void
   onContactClick: () => void
 }
 
 export function Header({
   onProfessionalsClick,
-  onAboutClick,
-  onServicesClick,
   onContactClick,
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -26,13 +23,9 @@ export function Header({
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // FIX #6 — lock body scroll while mobile overlay is open so the
-  // page cannot scroll behind the nav or the header pill.
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
-    }
+    return () => { document.body.style.overflow = '' }
   }, [mobileMenuOpen])
 
   const handleNavClick = (callback: () => void) => {
@@ -40,16 +33,22 @@ export function Header({
     setMobileMenuOpen(false)
   }
 
+  // Scroll helpers — always find the element by id so the correct
+  // section is targeted regardless of what the parent's ref points to.
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="header-container">
 
-        {/* ── Logo (desktop + mobile header bar) ── */}
+        {/* ── Logo ── */}
         <div className="logo-section">
           <a
             href="#"
             className="logo"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
           >
             <img src="/images/logo.png" alt="G-Tech Freelancers Logo" className="logo-image" />
             <span className="company-name">G-Tech Freelancers</span>
@@ -58,7 +57,7 @@ export function Header({
 
         {isMobile ? (
           <>
-            {/* FIX #2 — CTA sits beside the hamburger in the header bar */}
+            {/* Mobile header bar: CTA + hamburger */}
             <div className="mobile-header-actions">
               <a href="#contact" className="header-cta mobile-cta" onClick={onContactClick}>
                 Get Started
@@ -72,18 +71,18 @@ export function Header({
               </button>
             </div>
 
-            {/* FIX #4 — full-viewport overlay; z-index 1001 covers the header pill */}
+            {/* Full-screen overlay */}
             {mobileMenuOpen && (
               <nav className="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation">
 
-                {/* FIX #1 — logo image + name are on the SAME LINE */}
                 <div className="mobile-nav-header">
                   <a
                     href="#"
                     className="mobile-nav-logo"
-                    onClick={() =>
+                    onClick={(e) => {
+                      e.preventDefault()
                       handleNavClick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
-                    }
+                    }}
                   >
                     <img
                       src="/images/logo.png"
@@ -101,30 +100,76 @@ export function Header({
                   </button>
                 </div>
 
-                {/* Nav links */}
                 <div className="mobile-nav-links">
                   <a
-                    href="#home"
-                    onClick={() =>
+                    href="#hero"
+                    onClick={(e) => {
+                      e.preventDefault()
                       handleNavClick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
-                    }
+                    }}
                   >
                     Home
                   </a>
-                  <a href="#about" onClick={() => handleNavClick(onAboutClick)}>About</a>
-                  <a href="#services" onClick={() => handleNavClick(onServicesClick)}>Services</a>
-                  <a href="#professionals" onClick={() => handleNavClick(onProfessionalsClick)}>
+
+                  {/* FIX: scrolls to id="about" (the mvv-section in Hero.tsx) */}
+                  <a
+                    href="#about"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(() => scrollTo('about'))
+                    }}
+                  >
+                    About Us
+                  </a>
+
+                  <a
+                    href="#services"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(() => scrollTo('services'))
+                    }}
+                  >
+                    Services
+                  </a>
+
+                  <a
+                    href="#why"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(() => scrollTo('why'))
+                    }}
+                  >
+                    Why G-Tech
+                  </a>
+
+                  <a
+                    href="#professionals"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(onProfessionalsClick)
+                    }}
+                  >
                     Our Team
                   </a>
-                  <a href="#contact" onClick={() => handleNavClick(onContactClick)}>Contact</a>
+                  <a
+                    href="#contact"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(onContactClick)
+                    }}
+                  >
+                    Contact
+                  </a>
                 </div>
 
-                {/* FIX #3 — CTA pinned at bottom with tighter padding */}
                 <div className="mobile-nav-cta">
                   <a
                     href="#contact"
                     className="contact-button-mobile"
-                    onClick={() => handleNavClick(onContactClick)}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(onContactClick)
+                    }}
                   >
                     Get Started
                   </a>
@@ -135,14 +180,47 @@ export function Header({
           </>
         ) : (
           <nav className="desktop-nav">
-            <a href="#home" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <a
+              href="#hero"
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+            >
               Home
             </a>
-            <a href="#about" onClick={onAboutClick}>About</a>
-            <a href="#services" onClick={onServicesClick}>Services</a>
-            <a href="#professionals" onClick={onProfessionalsClick}>Our Team</a>
-            <a href="#contact" onClick={onContactClick}>Contact</a>
-            <a href="#contact" className="header-cta" onClick={onContactClick}>Get Started</a>
+
+            {/* FIX: scrolls to id="about" (the mvv-section in Hero.tsx) */}
+            <a
+              href="#about"
+              onClick={(e) => {
+                e.preventDefault()
+                scrollTo('about')
+              }}
+            >
+              About US
+            </a>
+
+            <a 
+              href="#services" 
+              onClick={(e) => { 
+                e.preventDefault()
+                scrollTo('services')
+              }}
+            >
+              Services
+            </a>
+
+            <a
+              href="#why"
+              onClick={(e) => {
+                e.preventDefault()
+                scrollTo('why')
+              }}
+            >
+              Why G-Tech
+            </a>
+
+            <a href="#professionals" onClick={(e) => { e.preventDefault(); onProfessionalsClick() }}>Our Team</a>
+            <a href="#contact"       onClick={(e) => { e.preventDefault(); onContactClick() }}>Contact</a>
+            <a href="#contact" className="header-cta" onClick={(e) => { e.preventDefault(); onContactClick() }}>Get Started</a>
           </nav>
         )}
 

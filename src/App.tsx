@@ -4,6 +4,7 @@ import { Hero } from './components/Hero/Hero'
 import { ProfessionalSection } from './components/ProfessionalSection/ProfessionalSection'
 import { ProfileDetail } from './components/ProfileDetail/ProfileDetail'
 import { SocialProof } from './components/SocialProof/SocialProof'
+import { Services } from './components/ServicesSection/Services'
 import { Testimonials } from './components/TestimonialsSection/Testimonials'
 import { ContactSection } from './components/ContactSection/ContactSection'
 import { Footer } from './components/Footer/Footer'
@@ -15,16 +16,6 @@ function App() {
 
   const handleProfessionalsClick = () => {
     const element = document.getElementById('professionals')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const handleAboutClick = () => {
-    const element = document.getElementById('hero')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const handleServicesClick = () => {
-    const element = document.getElementById('why')
     element?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -42,8 +33,6 @@ function App() {
     <div className="app">
       <Header
         onProfessionalsClick={handleProfessionalsClick}
-        onAboutClick={handleAboutClick}
-        onServicesClick={handleServicesClick}
         onContactClick={handleContactClick}
       />
 
@@ -51,6 +40,7 @@ function App() {
         <Hero onGetStartedClick={handleGetStartedClick} />
         <ProfessionalSection onProfessionalClick={setSelectedProfessional} />
         <SocialProof />
+        <Services />
         <Testimonials />
         <ContactSection />
       </main>

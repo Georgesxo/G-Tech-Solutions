@@ -54,19 +54,19 @@ export const SERVICES: Service[] = [
   {
     id: 1,
     icon: 'Code2',
-    title: 'Software Development',
+    title: 'Software and Web Development',
     description: 'Custom applications and software solutions tailored to your needs'
   },
   {
     id: 2,
     icon: 'Globe',
-    title: 'Web Development',
-    description: 'Modern, responsive websites that engage and convert visitors'
+    title: 'Virtual Assistance',
+    description: 'Seamless operational and administrative support to scale your organization'
   },
   {
     id: 3,
     icon: 'BarChart3',
-    title: 'Data Analytics',
+    title: 'Data Analysis',
     description: 'Data-driven insights to optimize your business operations'
   },
   {
@@ -80,7 +80,7 @@ export const SERVICES: Service[] = [
 export const COMPANY_INFO = {
   name: 'G-Tech Freelancers',
   tagline: 'Outsourcing Excellence, Delivering Results',
-  mission: 'To provide exceptional, cost-effective solutions by connecting businesses with top-tier professionals across software development, web design, project management, data analysis, and virtual assistance.',
+  mission: 'To provide exceptional, cost-effective solutions by connecting businesses with top-tier professionals across software & web development, project management, data analysis, and virtual assistance.',
   vision: 'To be the trusted partner for businesses seeking reliable, skilled professionals to execute their projects with precision and excellence.',
   values: [
     'Excellence in execution',
@@ -91,7 +91,7 @@ export const COMPANY_INFO = {
   ],
   whyChooseUs: [
     'Experienced professionals across diverse industries',
-    'Competitive pricing and flexible engagement models',
+    'Competitive pricing models and flexible engagement models',
     'Quick project turnaround without compromising quality',
     'Dedicated project management and oversight',
     'Scalable solutions that grow with your business',

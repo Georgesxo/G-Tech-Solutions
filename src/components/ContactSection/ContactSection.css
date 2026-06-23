@@ -1,6 +1,13 @@
 /* ============================================
-   Contact Section — Premium Polished Design
+   Contact Section
    ============================================ */
+
+/* Ensure everything respects its own width */
+.contact-section *,
+.contact-section *::before,
+.contact-section *::after {
+  box-sizing: border-box;
+}
 
 .contact-section {
   position: relative;
@@ -9,7 +16,6 @@
   overflow: hidden;
 }
 
-/* Premium decorative background elements (21st-dev inspired) */
 .contact-section::before {
   content: '';
   position: absolute;
@@ -34,14 +40,16 @@
   pointer-events: none;
 }
 
-/* ── Container ── */
+/* ── Container ──
+   FIX: replaced var(--spacing-xl) → explicit 2rem so both sides
+   always have real padding regardless of whether the variable is set.   */
 .contact-container {
   position: relative;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 var(--spacing-xl);
+  padding: 0 2rem;                /* ← was var(--spacing-xl) */
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 4rem;
@@ -54,6 +62,7 @@
   flex-direction: column;
   gap: 1.25rem;
   padding-top: 1rem;
+  min-width: 0;                   /* stops grid children from overflowing */
 }
 
 .contact-info-column h2 {
@@ -63,7 +72,7 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--primary);
-  margin: 12px;
+  margin: 12px 0;
 }
 
 .contact-intro {
@@ -80,6 +89,7 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .contact-info-card {
@@ -88,18 +98,18 @@
   gap: 1.25rem;
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-lg);
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all var(--transition);
   cursor: default;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;                    /* constrain to column, never wider */
 }
 
 .contact-info-card:hover {
   border-color: rgba(0, 212, 170, 0.3);
-  background: var(--bg-primary);
   transform: translateX(8px);
-  box-shadow: 0 8px 24px rgba(0, 212, 170, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 212, 170, 0.12);
 }
 
 .contact-info-icon {
@@ -108,6 +118,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
+  min-width: 48px;
   border-radius: var(--radius-md);
   background: linear-gradient(135deg, rgba(0, 212, 170, 0.12) 0%, rgba(0, 180, 216, 0.08) 100%);
   color: #00d4aa;
@@ -126,7 +137,7 @@
   color: #00b4d8;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
 }
 
 .contact-info-card a,
@@ -136,6 +147,8 @@
   font-weight: 600;
   text-decoration: none;
   transition: color var(--transition);
+  word-break: break-word;   
+    width: 100%;      /* long emails don't push the card wider */
 }
 
 .contact-info-card a:hover {
@@ -145,20 +158,23 @@
 /* ── Right Column — Form ── */
 .contact-form-column {
   position: relative;
+  min-width: 0;                   /* stops grid children from overflowing */
+  width: 100%;
 }
 
+/* FIX: explicit white + visible border + real shadow */
 .contact-form-card {
   position: relative;
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: var(--radius-xl);
   padding: 2.75rem;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
   transition: all var(--transition);
   overflow: hidden;
+  width: 100%;
 }
 
-/* Premium border gradient effect */
 .contact-form-card::before {
   content: '';
   position: absolute;
@@ -175,7 +191,7 @@
 }
 
 .contact-form-card:hover {
-  border-color: rgba(0, 212, 170, 0.2);
+  border-color: rgba(0, 212, 170, 0.25);
   box-shadow: 0 16px 48px rgba(0, 212, 170, 0.12);
 }
 
@@ -188,7 +204,7 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary);
-  margin-bottom: 2rem;
+  margin: 0 0 2rem;
   letter-spacing: -0.01em;
 }
 
@@ -197,6 +213,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  width: 100%;
 }
 
 .form-row {
@@ -209,6 +226,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
+  min-width: 0;
 }
 
 .form-group label {
@@ -218,12 +236,12 @@
   letter-spacing: 0.02em;
 }
 
-/* ── Inputs & Textarea ── */
+/* FIX: explicit light-gray bg so inputs look like input fields */
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  background: #f5f6f8;
+  border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: var(--radius-md);
   padding: 0.9rem 1.1rem;
   font-family: var(--font-body);
@@ -244,14 +262,14 @@
 
 .form-group input:hover,
 .form-group textarea:hover {
-  border-color: rgba(0, 212, 170, 0.2);
-  background: #fafbfc;
+  border-color: rgba(0, 212, 170, 0.3);
+  background: #f0f1f3;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #00d4aa;
-  background: var(--bg-primary);
+  background: #ffffff;
   box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
 }
 
@@ -279,7 +297,6 @@
   border: none;
   cursor: pointer;
   transition: all var(--transition);
-  position: relative;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 212, 170, 0.3);
   text-transform: uppercase;
@@ -343,10 +360,7 @@
   .contact-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-  }
-
-  .contact-intro {
-    max-width: 100%;
+    padding: 0 1.75rem;           /* explicit, replaces var(--spacing-lg) */
   }
 }
 
@@ -355,8 +369,10 @@
     padding: 4rem 0;
   }
 
+  /* FIX: 1.25rem gives ~20px left+right breathing room on phones.
+     Was var(--spacing-lg) which was resolving to 0.                */
   .contact-container {
-    padding: 0 var(--spacing-lg);
+    padding: 0 1.25rem;
   }
 
   .contact-form-card {

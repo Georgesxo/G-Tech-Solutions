@@ -39,6 +39,10 @@ const columnVariant = {
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const columns = [
     {
       title: 'About Us',
@@ -61,11 +65,12 @@ export function Footer() {
       title: 'Quick Links',
       content: (
         <ul className="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#professionals">Our Team</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why">Why Choose Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>Home</a></li>
+          <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About US</a></li>
+          <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }}>Services</a></li>
+          <li><a href="#why" onClick={(e) => { e.preventDefault(); scrollTo('why') }}>Why G-Tech</a></li>
+          <li><a href="#professionals" onClick={(e) => { e.preventDefault(); scrollTo('professionals') }}>Our Team</a></li>
+          <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }}>Contact</a></li>
         </ul>
       )
     },
@@ -73,8 +78,7 @@ export function Footer() {
       title: 'Services',
       content: (
         <ul className="footer-links">
-          <li><a href="#services">Software Development</a></li>
-          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">Software & web Development</a></li>
           <li><a href="#services">Data Analytics</a></li>
           <li><a href="#services">Project Management</a></li>
           <li><a href="#services">Virtual Assistance</a></li>

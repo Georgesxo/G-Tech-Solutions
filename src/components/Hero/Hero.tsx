@@ -8,7 +8,6 @@ interface HeroProps {
   onGetStartedClick: () => void
 }
 
-// Enhanced animation variants for more dramatic effects
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: (delay: number) => ({
@@ -44,8 +43,6 @@ const scaleIn = {
   })
 }
 
-
-
 export function Hero({ onGetStartedClick }: HeroProps) {
   const isMobile = useIsMobile()
 
@@ -77,14 +74,13 @@ export function Hero({ onGetStartedClick }: HeroProps) {
           />
           <div className="hero-grid-pattern"></div>
         </div>
-        
+
         <div className="hero-content">
           <motion.div
             className="hero-badge"
             initial={{ opacity: 0, y: -20, scale: 0.85 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
-            whileInView={{ scale: 1 }}
             whileHover={{ scale: 1.05, backgroundColor: 'rgba(0, 212, 170, 0.15)' }}
           >
             <Zap size={14} />
@@ -107,7 +103,7 @@ export function Hero({ onGetStartedClick }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
           >
-            Connect with top-tier professionals to execute your projects 
+            Connect with top-tier professionals to execute your projects
             with precision, quality, and unmatched dedication
           </motion.p>
 
@@ -146,10 +142,10 @@ export function Hero({ onGetStartedClick }: HeroProps) {
           transition={{ duration: 0.8, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           {[
-            { icon: <Briefcase size={20} />, number: '200+', label: 'Projects Delivered' },
-            { icon: <Users size={20} />, number: '50+', label: 'Happy Clients' },
+            { icon: <Briefcase size={20} />, number: '50+', label: 'Projects Delivered' },
+            { icon: <Users size={20} />, number: '45+', label: 'Happy Clients' },
             { icon: <Award size={20} />, number: '4', label: 'Specialties' },
-            { icon: <TrendingUp size={20} />, number: '99%', label: 'Satisfaction' },
+            { icon: <TrendingUp size={20} />, number: '95%', label: 'Satisfaction' },
           ].map((stat, i) => (
             <motion.div key={i} style={{ display: 'contents' }}>
               {i > 0 && <div className="hero-stat-divider" />}
@@ -160,7 +156,7 @@ export function Hero({ onGetStartedClick }: HeroProps) {
                 transition={{ duration: 0.5, delay: 0.9 + i * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
                 whileHover={{ scale: 1.12, y: -5 }}
               >
-                <motion.div 
+                <motion.div
                   className="hero-stat-icon"
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 2.5, delay: i * 0.2, repeat: Infinity }}
@@ -168,7 +164,7 @@ export function Hero({ onGetStartedClick }: HeroProps) {
                   {stat.icon}
                 </motion.div>
                 <div className="hero-stat-content">
-                  <motion.span 
+                  <motion.span
                     className="hero-stat-number"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -184,8 +180,9 @@ export function Hero({ onGetStartedClick }: HeroProps) {
         </motion.div>
       </section>
 
-      {/* Mission, Vision, Values Section */}
-      <section className="mvv-section">
+      {/* ── Who We Are / Mission Vision Values ──
+          id="about" added so the header's About link scrolls here correctly. */}
+      <section className="mvv-section" id="about">
         <motion.div
           className="mvv-header"
           initial="hidden"
@@ -201,8 +198,8 @@ export function Hero({ onGetStartedClick }: HeroProps) {
         <div className="mvv-container">
           {[
             { cls: 'mission', icon: <Target size={28} />, title: 'Our Mission', content: <p>{COMPANY_INFO.mission}</p> },
-            { cls: 'vision', icon: <Zap size={28} />, title: 'Our Vision', content: <p>{COMPANY_INFO.vision}</p> },
-            { cls: 'values', icon: <Heart size={28} />, title: 'Our Values', content: (
+            { cls: 'vision',  icon: <Zap size={28} />,    title: 'Our Vision',  content: <p>{COMPANY_INFO.vision}</p> },
+            { cls: 'values',  icon: <Heart size={28} />,  title: 'Our Values',  content: (
               <ul>{COMPANY_INFO.values.map((value, idx) => <li key={idx}>{value}</li>)}</ul>
             )},
           ].map((card, i) => (
@@ -214,14 +211,14 @@ export function Hero({ onGetStartedClick }: HeroProps) {
               viewport={{ once: true, margin: "-60px" }}
               custom={i * 0.2}
               variants={scaleIn}
-              whileHover={{ 
-                y: -12, 
+              whileHover={{
+                y: -12,
                 boxShadow: '0 24px 60px rgba(0, 212, 170, 0.2)',
                 borderColor: 'rgba(0, 212, 170, 0.4)'
               }}
               transition={{ duration: 0.4 }}
             >
-              <motion.div 
+              <motion.div
                 className="mvv-icon"
                 animate={{ rotate: [0, 8, -8, 0], y: [0, -4, 0] }}
                 transition={{ duration: 3, delay: i * 0.4, repeat: Infinity }}
@@ -247,7 +244,7 @@ export function Hero({ onGetStartedClick }: HeroProps) {
           <motion.span className="section-badge section-badge--accent" variants={staggerItem}>Why Us</motion.span>
           <motion.h2 variants={staggerItem}>Why Choose <span className="gradient-text">G-Tech Freelancers</span>?</motion.h2>
           <motion.p className="wcu-subtitle" variants={staggerItem}>We deliver exceptional results through expertise and dedication</motion.p>
-          
+
           <div className={`wcu-grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2'}`}>
             {COMPANY_INFO.whyChooseUs.map((reason, index) => (
               <motion.div
@@ -258,14 +255,14 @@ export function Hero({ onGetStartedClick }: HeroProps) {
                 viewport={{ once: true, margin: "-40px" }}
                 custom={index * 0.1}
                 variants={fadeUp}
-                whileHover={{ 
-                  y: -8, 
+                whileHover={{
+                  y: -8,
                   borderColor: 'rgba(0, 212, 170, 0.5)',
                   boxShadow: '0 12px 32px rgba(0, 212, 170, 0.15)'
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <motion.div 
+                <motion.div
                   className="wcu-number"
                   animate={{ scale: [1, 1.15, 1] }}
                   transition={{ duration: 2, delay: index * 0.3, repeat: Infinity }}
