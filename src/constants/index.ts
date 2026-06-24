@@ -98,7 +98,7 @@ export const COMPANY_INFO = {
     'Proven track record of successful project delivery'
   ],
   phone: '+233 (059) 377-8377',
-  email: 'gtechsolutionscompany@gmail.com',
+  email: 'gtechfreelancers@gmail.com',
   address: 'Accra, Ghana, West Africa',
   year: new Date().getFullYear()
 }

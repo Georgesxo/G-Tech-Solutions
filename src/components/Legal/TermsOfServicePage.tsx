@@ -179,8 +179,8 @@ export function TermsOfServicePage({
               <h2>Contact Us</h2>
               <p>
                 If you have questions about these Terms, contact us at{' '}
-                <a href="mailto:gtechsolutionscompany@gmail.com">
-                  gtechsolutionscompany@gmail.com
+                <a href="mailto:gtechfreelancers@gmail.com">
+                  gtechfreelancers@gmail.com
                 </a>{' '}
                 or write to G-Tech Freelancers, Accra, Ghana, West Africa.
               </p>

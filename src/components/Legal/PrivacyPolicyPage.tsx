@@ -184,8 +184,8 @@ export function PrivacyPolicyPage({
               <p>
                 If you have questions about this Privacy Policy or our data practices, contact
                 us at{' '}
-                <a href="mailto:gtechsolutionscompany@gmail.com">
-                  gtechsolutionscompany@gmail.com
+                <a href="mailto:gtechfreelancers@gmail.com">
+                  gtechfreelancers@gmail.com
                 </a>{' '}
                 or write to G-Tech Freelancers, Accra, Ghana, West Africa.
               </p>

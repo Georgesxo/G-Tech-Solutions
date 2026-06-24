@@ -42,7 +42,7 @@ export function SitemapPage({
       icon: <Briefcase size={24} />,
       links: [
         { label: 'Services', id: 'services', onClick: () => scrollTo('services') },
-        { label: 'Software & web Development', id: 'services', onClick: () => scrollTo('services') },
+        { label: 'Software & Web Development', id: 'services', onClick: () => scrollTo('services') },
         { label: 'Virtual Assistance', id: 'services', onClick: () => scrollTo('services') },
         { label: 'Data Analytics', id: 'services', onClick: () => scrollTo('services') },
         { label: 'Project Management', id: 'services', onClick: () => scrollTo('services') },
@@ -121,8 +121,8 @@ export function SitemapPage({
               </p>
               <p>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:gtechsolutionscompany@gmail.com">
-                  gtechsolutionscompany@gmail.com
+                <a href="mailto:gtechfreelancers@gmail.com">
+                  gtechfreelancers@gmail.com
                 </a>
               </p>
               <p>

@@ -42,7 +42,7 @@ const columnVariant = {
 }
 
 export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
-  const currentYear = new Date().getFullYear()
+  const currentYear = 2024
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -93,7 +93,7 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
       title: 'Services',
       content: (
         <ul className="footer-links">
-          <li><a href="#services">Software & web Development</a></li>
+          <li><a href="#services">Software & Web Development</a></li>
           <li><a href="#services">Data Analytics</a></li>
           <li><a href="#services">Project Management</a></li>
           <li><a href="#services">Virtual Assistance</a></li>
