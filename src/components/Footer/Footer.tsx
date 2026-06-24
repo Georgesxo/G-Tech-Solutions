@@ -3,6 +3,11 @@ import { Mail, Phone, MapPin, Zap, ChevronRight, Globe, ExternalLink } from 'luc
 import { COMPANY_INFO, SOCIAL_LINKS } from '../../constants'
 import '../Footer/Footer.css'
 
+interface FooterProps {
+  onNavigateTo?: (page: 'privacy' | 'terms' | 'sitemap') => void
+  onNavigateHome?: () => void
+}
+
 // Animation variants
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -36,11 +41,21 @@ const columnVariant = {
   })
 }
 
-export function Footer() {
+export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
   const currentYear = new Date().getFullYear()
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const navigateTo = (callback: () => void) => {
+    if (onNavigateHome) {
+      onNavigateHome()
+      // Small delay to ensure page switch before scrolling
+      setTimeout(callback, 100)
+    } else {
+      callback()
+    }
   }
 
   const columns = [
@@ -65,12 +80,12 @@ export function Footer() {
       title: 'Quick Links',
       content: (
         <ul className="footer-links">
-          <li><a href="#hero" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>Home</a></li>
-          <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About US</a></li>
-          <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }}>Services</a></li>
-          <li><a href="#why" onClick={(e) => { e.preventDefault(); scrollTo('why') }}>Why G-Tech</a></li>
-          <li><a href="#professionals" onClick={(e) => { e.preventDefault(); scrollTo('professionals') }}>Our Team</a></li>
-          <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }}>Contact</a></li>
+          <li><a href="#hero" onClick={(e) => { e.preventDefault(); navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }}>Home</a></li>
+          <li><a href="#about" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('about')) }}>About US</a></li>
+          <li><a href="#services" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('services')) }}>Services</a></li>
+          <li><a href="#why" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('why')) }}>Why G-Tech</a></li>
+          <li><a href="#professionals" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('professionals')) }}>Our Team</a></li>
+          <li><a href="#contact" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('contact')) }}>Contact</a></li>
         </ul>
       )
     },
@@ -182,11 +197,11 @@ export function Footer() {
             &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
           </p>
           <div className="footer-legal">
-            <a href="#privacy">Privacy Policy</a>
+            <a href="#privacy" onClick={(e) => { e.preventDefault(); onNavigateTo?.('privacy') }}>Privacy Policy</a>
             <span className="divider">|</span>
-            <a href="#terms">Terms of Service</a>
+            <a href="#terms" onClick={(e) => { e.preventDefault(); onNavigateTo?.('terms') }}>Terms of Service</a>
             <span className="divider">|</span>
-            <a href="#sitemap">Sitemap</a>
+            <a href="#sitemap" onClick={(e) => { e.preventDefault(); onNavigateTo?.('sitemap') }}>Sitemap</a>
           </div>
         </div>
       </motion.div>

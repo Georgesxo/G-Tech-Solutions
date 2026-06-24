@@ -290,7 +290,11 @@
 /* Mobile Styles */
 @media (max-width: 767px) {
   .professionals-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
+  }
+
+  .professionals-container {
+    padding: 0 1rem;
   }
 
   .professionals-title {
@@ -319,8 +323,16 @@
 }
 
 @media (max-width: 480px) {
+  .professionals-section {
+    padding: 2rem 0;
+  }
+
+  .professionals-container {
+    padding: 0 0.75rem;
+  }
+
   .professional-image-wrapper {
-    height: 200px;
+    height: 300px;
   }
 
   .professional-info {

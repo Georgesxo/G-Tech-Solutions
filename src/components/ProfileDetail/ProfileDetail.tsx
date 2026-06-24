@@ -6,6 +6,7 @@ import '../ProfileDetail/ProfileDetail.css'
 interface ProfileDetailProps {
   professional: Professional | null
   onClose: () => void
+  onScheduleClick: () => void
 }
 
 const overlayVariants = {
@@ -47,7 +48,12 @@ const staggerItem = {
   }
 }
 
-export function ProfileDetail({ professional, onClose }: ProfileDetailProps) {
+export function ProfileDetail({ professional, onClose, onScheduleClick }: ProfileDetailProps) {
+  const handleSchedule = () => {
+    onClose()
+    onScheduleClick()
+  }
+
   return (
     <AnimatePresence>
       {professional && (
@@ -172,7 +178,9 @@ export function ProfileDetail({ professional, onClose }: ProfileDetailProps) {
                 <motion.div className="profile-section" variants={staggerItem}>
                   <h3>Get In Touch</h3>
                   <motion.button
+                    type="button"
                     className="contact-button"
+                    onClick={handleSchedule}
                     whileHover={{
                       scale: 1.06,
                       y: -3,

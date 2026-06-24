@@ -7,11 +7,13 @@ import '../Header/Header.css'
 interface HeaderProps {
   onProfessionalsClick: () => void
   onContactClick: () => void
+  onNavigateHome?: () => void
 }
 
 export function Header({
   onProfessionalsClick,
   onContactClick,
+  onNavigateHome,
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -39,6 +41,17 @@ export function Header({
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // Navigate to a section, handling legal pages by going home first
+  const navigateTo = (callback: () => void) => {
+    if (onNavigateHome) {
+      onNavigateHome()
+      // Small delay to ensure page switch before scrolling
+      setTimeout(callback, 100)
+    } else {
+      callback()
+    }
+  }
+
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="header-container">
@@ -48,7 +61,7 @@ export function Header({
           <a
             href="#"
             className="logo"
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+            onClick={(e) => { e.preventDefault(); navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }}
           >
             <img src="/images/logo.png" alt="G-Tech Freelancers Logo" className="logo-image" />
             <span className="company-name">G-Tech Freelancers</span>
@@ -81,7 +94,7 @@ export function Header({
                     className="mobile-nav-logo"
                     onClick={(e) => {
                       e.preventDefault()
-                      handleNavClick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
+                      handleNavClick(() => navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })))
                     }}
                   >
                     <img
@@ -105,7 +118,7 @@ export function Header({
                     href="#hero"
                     onClick={(e) => {
                       e.preventDefault()
-                      handleNavClick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
+                      handleNavClick(() => navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })))
                     }}
                   >
                     Home
@@ -116,7 +129,7 @@ export function Header({
                     href="#about"
                     onClick={(e) => {
                       e.preventDefault()
-                      handleNavClick(() => scrollTo('about'))
+                      handleNavClick(() => navigateTo(() => scrollTo('about')))
                     }}
                   >
                     About Us
@@ -126,7 +139,7 @@ export function Header({
                     href="#services"
                     onClick={(e) => {
                       e.preventDefault()
-                      handleNavClick(() => scrollTo('services'))
+                      handleNavClick(() => navigateTo(() => scrollTo('services')))
                     }}
                   >
                     Services
@@ -136,7 +149,7 @@ export function Header({
                     href="#why"
                     onClick={(e) => {
                       e.preventDefault()
-                      handleNavClick(() => scrollTo('why'))
+                      handleNavClick(() => navigateTo(() => scrollTo('why')))
                     }}
                   >
                     Why G-Tech
@@ -146,7 +159,7 @@ export function Header({
                     href="#professionals"
                     onClick={(e) => {
                       e.preventDefault()
-                      handleNavClick(onProfessionalsClick)
+                      handleNavClick(() => navigateTo(onProfessionalsClick))
                     }}
                   >
                     Our Team
@@ -155,7 +168,7 @@ export function Header({
                     href="#contact"
                     onClick={(e) => {
                       e.preventDefault()
-                      handleNavClick(onContactClick)
+                      handleNavClick(() => navigateTo(onContactClick))
                     }}
                   >
                     Contact
@@ -182,7 +195,7 @@ export function Header({
           <nav className="desktop-nav">
             <a
               href="#hero"
-              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+              onClick={(e) => { e.preventDefault(); navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }}
             >
               Home
             </a>
@@ -192,7 +205,7 @@ export function Header({
               href="#about"
               onClick={(e) => {
                 e.preventDefault()
-                scrollTo('about')
+                navigateTo(() => scrollTo('about'))
               }}
             >
               About US
@@ -202,7 +215,7 @@ export function Header({
               href="#services" 
               onClick={(e) => { 
                 e.preventDefault()
-                scrollTo('services')
+                navigateTo(() => scrollTo('services'))
               }}
             >
               Services
@@ -212,15 +225,15 @@ export function Header({
               href="#why"
               onClick={(e) => {
                 e.preventDefault()
-                scrollTo('why')
+                navigateTo(() => scrollTo('why'))
               }}
             >
               Why G-Tech
             </a>
 
-            <a href="#professionals" onClick={(e) => { e.preventDefault(); onProfessionalsClick() }}>Our Team</a>
-            <a href="#contact"       onClick={(e) => { e.preventDefault(); onContactClick() }}>Contact</a>
-            <a href="#contact" className="header-cta" onClick={(e) => { e.preventDefault(); onContactClick() }}>Get Started</a>
+            <a href="#professionals" onClick={(e) => { e.preventDefault(); navigateTo(onProfessionalsClick) }}>Our Team</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); navigateTo(onContactClick) }}>Contact</a>
+            <a href="#contact" className="header-cta" onClick={(e) => { e.preventDefault(); navigateTo(onContactClick) }}>Get Started</a>
           </nav>
         )}
 
