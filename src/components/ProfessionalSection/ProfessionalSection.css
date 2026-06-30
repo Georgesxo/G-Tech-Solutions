@@ -207,6 +207,62 @@
   flex-grow: 1;
 }
 
+.professional-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  margin: 0 0 1rem 0;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, rgba(14, 165, 233, 0.08) 100%);
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.professional-card-cta:hover,
+.professional-card-cta:focus-visible {
+  transform: translateX(2px);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(14, 165, 233, 0.14) 100%);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.16);
+  outline: none;
+}
+
+.read-more-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition);
+}
+
+.professional-card-cta:hover .read-more-arrow,
+.professional-card-cta:focus-visible .read-more-arrow {
+  transform: translateX(3px);
+}
+
+.professional-LinkedIn {
+  margin: 0 0 1rem 0;
+}
+
+.professional-LinkedIn a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.professional-LinkedIn a:hover,
+.professional-LinkedIn a:focus-visible {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
 .professional-experience {
   margin-bottom: 1.25rem;
 }

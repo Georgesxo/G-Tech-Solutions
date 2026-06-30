@@ -15,7 +15,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    await resend.emails.send({
+   const { data, error } = await resend.emails.send({
       // Replace yourdomain.com with your verified domain once Resend confirms it
       from: 'onboarding@resend.dev',
       to: ['gtechfreelancers@gmail.com'],
@@ -141,8 +141,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   </html>
 `,
     })
+    if (error) {
+  console.error('[Resend error]', error)
+  return res.status(500).json({ ok: false, error: error.message })
+}
 
-    return res.json({ ok: true })
+return res.json({ ok: true, id: data?.id })
+
   } catch (err) {
     console.error('[Resend error]', err)
     return res.status(500).json({ ok: false, error: 'Failed to send message. Please try again.' })

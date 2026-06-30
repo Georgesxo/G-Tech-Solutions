@@ -6,6 +6,7 @@ import { ProfileDetail } from './components/ProfileDetail/ProfileDetail'
 import { SocialProof } from './components/SocialProof/SocialProof'
 import { Services } from './components/ServicesSection/Services'
 import { Testimonials } from './components/TestimonialsSection/Testimonials'
+import { ComparisonSection } from './components/ComparisonSection/ComparisonSection'
 import { ContactSection } from './components/ContactSection/ContactSection'
 import { Footer } from './components/Footer/Footer'
 import { PrivacyPolicyPage } from './components/Legal/PrivacyPolicyPage'
@@ -109,6 +110,7 @@ function App() {
         <SocialProof />
         <Services />
         <Testimonials />
+        <ComparisonSection />
         <ContactSection />
       </main>
 

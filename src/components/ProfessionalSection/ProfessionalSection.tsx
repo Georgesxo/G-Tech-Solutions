@@ -136,8 +136,32 @@ export function ProfessionalSection({ onProfessionalClick }: ProfessionalSection
                 </motion.p>
                 <p className="professional-specialization">{professional.specialization}</p>
                 <p className="professional-description">{professional.description}</p>
+                <div
+                  className="professional-card-cta"
+                  role="button"
+                  tabIndex={0}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    onProfessionalClick(professional)
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      onProfessionalClick(professional)
+                    }
+                  }}
+                >
+                  <span>Read more</span>
+                  <span className="read-more-arrow" aria-hidden="true">→</span>
+                </div>
                 <p className="professional-LinkedIn">
-                  <a href={professional.LinkedIn} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={professional.LinkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     View LinkedIn Profile
                   </a>
                 </p>
