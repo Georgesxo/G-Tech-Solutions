@@ -47,7 +47,7 @@ export function Hero({ onGetStartedClick }: HeroProps) {
   const isMobile = useIsMobile()
 
   const handleLearnMore = () => {
-    const element = document.getElementById('why')
+    const element = document.getElementById('about')
     element?.scrollIntoView({ behavior: 'smooth' })
   }
 

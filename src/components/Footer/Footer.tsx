@@ -200,8 +200,8 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
             <a href="#privacy" onClick={(e) => { e.preventDefault(); onNavigateTo?.('privacy') }}>Privacy Policy</a>
             <span className="divider">|</span>
             <a href="#terms" onClick={(e) => { e.preventDefault(); onNavigateTo?.('terms') }}>Terms of Service</a>
-            <span className="divider">|</span>
-            <a href="#sitemap" onClick={(e) => { e.preventDefault(); onNavigateTo?.('sitemap') }}>Sitemap</a>
+            <span className="divider"></span>
+           <a href="#sitemap" onClick={(e) => { e.preventDefault(); onNavigateTo?.('sitemap') }}></a>
           </div>
         </div>
       </motion.div>

@@ -39,14 +39,15 @@ export const PROFESSIONALS: Professional[] = [
   },
   {
     id: 4,
-    name: 'David Thompson',
-    title: 'Data Analyst & Business Consultant',
+    name: ' Wisdom Festus Foli',
+    title: 'Data Analyst | Business Intelligence & Finance Professional',
     specialization: 'Data Analysis',
     description: 'Transforming data into actionable business insights',
     image: '/images/professionals/data-analyst.jpg',
-    experience: '7+ years',
+    experience: '4+ years',
     skills: ['Python', 'SQL', 'Tableau', 'Power BI', 'Excel', 'Statistical Analysis'],
-    bio: 'David specializes in mining meaningful insights from complex datasets. His analytical prowess combined with business acumen enables him to provide strategic recommendations that drive growth. He also provides comprehensive virtual assistance services, handling administrative tasks, research, and operational support with meticulous attention to detail.'
+    bio: 'Wisdom is a Data Analyst with over four years of experience in business intelligence, data analytics, and performance reporting. He has led data-driven initiatives that support strategic decision-making, learner engagement, and business growth at ALX Ghana. Passionate about leveraging technology and analytics to solve real-world problems, he is also advancing his expertise through the Institute of Chartered Accountants Ghana (ICAG) and Gold Coast university (MBA in Business Intelligence and Data Analytics).',
+    LinkedIn:  'https://www.linkedin.com/in/wisdomfestusfoli/'
   }
 ]
 
@@ -94,7 +95,7 @@ export const COMPANY_INFO = {
     'Competitive pricing models and flexible engagement models',
     'Quick project turnaround without compromising quality',
     'Dedicated project management and oversight',
-    'Scalable solutions that grow with your business',
+    'Scalable solid solutions that grow with your business',
     'Proven track record of successful project delivery'
   ],
   phone: '+233 (059) 377-8377',

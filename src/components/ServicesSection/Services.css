@@ -47,7 +47,7 @@
 /* Header */
 .services-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.2rem;
 }
 
 .section-badge--accent {
@@ -192,7 +192,7 @@
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-xl);
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .services-scroll {
