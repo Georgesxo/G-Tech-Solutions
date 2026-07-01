@@ -21,13 +21,13 @@ const proofItems: ProofItem[] = [
     icon: <Star size={32} />,
     stat: '4.9/5',
     label: 'Client Rating',
-    description: 'Based on 150+ reviews'
+    description: 'Based on 50+ reviews'
   },
   {
     icon: <Users size={32} />,
     stat: '50+',
     label: 'Clients Served',
-    description: 'Across 25+ countries'
+    description: 'Across 5+ countries'
   },
   {
     icon: <TrendingUp size={32} />,
@@ -37,8 +37,8 @@ const proofItems: ProofItem[] = [
   },
   {
     icon: <Award size={32} />,
-    stat: '12',
-    label: 'Industry Awards',
+    stat: '20+',
+    label: 'Recommendations',
     description: 'For excellence & innovation'
   }
 ]

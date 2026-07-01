@@ -105,10 +105,11 @@ export const COMPANY_INFO = {
 }
 
 export const SOCIAL_LINKS = {
-  linkedin: 'https://linkedin.com/company/g-tech-solutions',
-  twitter: 'https://twitter.com/gtechsolutions',
-  facebook: 'https://facebook.com/gtechsolutions',
-  instagram: 'https://instagram.com/gtechsolutions'
+  linkedin: 'https://www.linkedin.com/in/awuah/',
+  twitter: 'https://x.com/awuahg500?t=SFQ0Nr2MtKN6wLVimdvy9w&s=09',
+  facebook: 'https://www.facebook.com/share/14nv72WFLsn/',
+  instagram: 'https://www.instagram.com/gtechltd?igsh=cTA5MTdmaWpnZXlw',
+  tiktok: 'https://www.tiktok.com/@king_georgesco?_r=1&_t=ZS-97fNjcCDtrB'
 }
 
 export const TESTIMONIALS = [

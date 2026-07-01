@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { Mail, Phone, MapPin, Zap, ChevronRight, Globe, ExternalLink } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 import { COMPANY_INFO, SOCIAL_LINKS } from '../../constants'
 import '../Footer/Footer.css'
 
@@ -122,10 +122,11 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
   ]
 
   const socialLinks = [
-    { href: SOCIAL_LINKS.linkedin, icon: <Globe size={24} />, label: 'LinkedIn' },
-    { href: SOCIAL_LINKS.twitter, icon: <ExternalLink size={24} />, label: 'Twitter' },
-    { href: SOCIAL_LINKS.facebook, icon: <Zap size={24} />, label: 'Facebook' },
-    { href: SOCIAL_LINKS.instagram, icon: <ChevronRight size={24} />, label: 'Instagram' },
+    { href: SOCIAL_LINKS.linkedin, src: '/images/social%20icons/linkedin.png', label: 'LinkedIn' },
+    { href: SOCIAL_LINKS.twitter, src: '/images/social%20icons/X.png', label: 'X' },
+    { href: SOCIAL_LINKS.facebook, src: '/images/social%20icons/facebook.png', label: 'Facebook' },
+    { href: SOCIAL_LINKS.instagram, src: '/images/social%20icons/instagram.jpg', label: 'Instagram' },
+    { href: SOCIAL_LINKS.tiktok, src: '/images/social%20icons/tiktok.png', label: 'TikTok' },
   ]
 
   return (
@@ -174,7 +175,7 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
                 >
-                  {link.icon}
+                  <img src={link.src} alt={link.label} className="social-icon-image" />
                 </motion.a>
               ))}
             </div>

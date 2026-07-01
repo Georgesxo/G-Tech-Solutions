@@ -20,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       from: 'onboarding@resend.dev',
       to: ['gtechfreelancers@gmail.com'],
       replyTo: email,
-     subject: `New Enquiry: ${subject} — from ${name}`,
+     subject: `${subject} `,
       html: `
   <!DOCTYPE html>
   <html>
@@ -41,11 +41,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               <td style="background:#0a0a0a;padding:32px 40px;">
                 <h1 style="margin:0;color:#00d4aa;font-size:22px;font-weight:700;
                            letter-spacing:-0.5px;">
-                  GTech Solutions
+                  GTech Freelancers
                 </h1>
-                <p style="margin:6px 0 0;color:#888;font-size:13px;">
-                  New enquiry from your website
-                </p>
+                
               </td>
             </tr>
 
