@@ -97,6 +97,7 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
           <li><a href="#services">Data Analytics</a></li>
           <li><a href="#services">Project Management</a></li>
           <li><a href="#services">Virtual Assistance</a></li>
+           <li><a href="#services">Creative Directing and Designing</a></li>
         </ul>
       )
     },

@@ -1,13 +1,15 @@
 import { motion } from 'motion/react'
-import { Code2, Globe, BarChart3, CheckCircle } from 'lucide-react'
+import { CheckCircle, Code2, Globe, BarChart3, Sparkles } from 'lucide-react'
 import { SERVICES } from '../../constants'
 import './Services.css'
 
 const iconMap: Record<string, React.ReactNode> = {
+  'CheckCircle': <CheckCircle size={32} strokeWidth={1.5} />,
   'Code2': <Code2 size={32} strokeWidth={1.5} />,
   'Globe': <Globe size={32} strokeWidth={1.5} />,
   'BarChart3': <BarChart3 size={32} strokeWidth={1.5} />,
-  'CheckCircle': <CheckCircle size={32} strokeWidth={1.5} />
+  'Sparkles': <Sparkles size={32} strokeWidth={1.5} />
+  
 }
 
 const staggerContainer = {

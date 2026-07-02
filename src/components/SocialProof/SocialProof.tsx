@@ -44,16 +44,24 @@ const proofItems: ProofItem[] = [
 ]
 
 const clientLogos = [
-  'ALX Ghana',
+  'Sintex Ghana',
   'AgentSix Ai',
-  'Sarina Real Estate',
+  'Jumia Ghana',
   'Kortex Ai',
   'Scent of Millien',
-  'YEA Africa',
-  'Teaspressa',
+  'MTN',
+  'Unilever',
   'BrainLab Ai',
   'Forevermore Family',
-  'Niche Cocoa',
+  'Vodafone',
+  'Munch n Dip Michigan',
+  'Clinica',
+  'Nova Gas',
+  'Remcash',
+  'The Burger Spot Michigan',
+  'Cypher Zone',
+  'Gredox',
+  'Opine'
 ]
 
 // Animation variants
