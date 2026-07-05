@@ -10,8 +10,8 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'What services does G-Tech Solutions provide?',
-    answer: 'We support businesses with tailored digital solutions, including website development, product strategy, technical implementation, and ongoing support to help teams launch and grow with confidence.'
+    question: 'What services does G-Tech Freelancers provide?',
+    answer: 'We support businesses with tailored digital solutions, including website & software development, product & project strategy, technical implementation, Creative designing & directing, Data analysis & Business intelligence, Virtual assistance and ongoing support to help teams launch and grow with confidence.'
   },
   {
     question: 'Can you work within my budget?',

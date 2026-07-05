@@ -12,7 +12,7 @@ interface ComparisonSectionProps {
 
 export function ComparisonSection({
   eyebrow = 'Strategic Advantage',
-  title = 'Why G-Tech Solutions delivers more value',
+  title = 'Why G-Tech Freelancers delivers more value',
   subtitle = 'We combine disciplined execution, specialist expertise, and collaborative delivery to help your business move forward with greater confidence.',
   ours = [
     'We tailor delivery to align with your budget while protecting quality, scope, and momentum.',

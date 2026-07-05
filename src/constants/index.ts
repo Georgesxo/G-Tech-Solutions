@@ -132,7 +132,7 @@ export const SOCIAL_LINKS = {
 
 export const TESTIMONIALS = [
   {
-    quote: "G-Tech Solutions transformed our digital operations. Their team delivered a complex project ahead of schedule with exceptional attention to detail. Highly recommended!",
+    quote: "G-Tech Freelancers transformed our digital operations. Their team delivered a complex project ahead of schedule with exceptional attention to detail. Highly recommended!",
     author: "Sarah Johnson, CEO at Digital Ventures",
     image: '/images/professionals/project-manager.jpg',
     alt: "Sarah Johnson"
