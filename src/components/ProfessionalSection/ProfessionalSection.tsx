@@ -40,6 +40,10 @@ const cardEnter = {
   })
 }
 
+const getProfileLinkLabel = (id: number) => {
+  return [1, 2, 4].includes(id) ? 'View LinkedIn Profile' : 'View Portfolio Profile'
+}
+
 export function ProfessionalSection({ onProfessionalClick }: ProfessionalSectionProps) {
   const isMobile = useIsMobile()
 
@@ -162,7 +166,7 @@ export function ProfessionalSection({ onProfessionalClick }: ProfessionalSection
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    View LinkedIn Profile
+                    {getProfileLinkLabel(professional.id)}
                   </a>
                 </p>
                 <div className="professional-experience">

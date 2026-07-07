@@ -11,7 +11,7 @@ export const PROFESSIONALS: Professional[] = [
     experience: '8+ years',
     skills: ['Agile', 'Scrum', 'Team Leadership', 'Risk Management', 'Stakeholder Communication'],
     bio: 'Vickie is a PMP-certified Digital Project Manager with 8+ years of experience managing marketing campaigns, digital operations, and cross-functional teams across telecoms and NGOs. She has delivered projects for brands like MTN, Vodafone, UNICEF, Unilever, and USAID.',
-     LinkedIn: 'https://www.linkedin.com/in/victoria-aziabah'
+    LinkedIn: 'https://www.linkedin.com/in/victoria-aziabah'
   },
   
   {
@@ -19,7 +19,7 @@ export const PROFESSIONALS: Professional[] = [
     name: 'Daniel Tetteh Partey',
     title: 'Senior Software Engineer',
     specialization: 'Software Engineering',
-    description: 'Passionate about creating stunning, responsive websites',
+    description: 'Passionate about creating digital products and stunning, responsive websites',
     image: '/images/professionals/web-developer.png',
     experience: '8+ years',
     skills: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript','Kotlin', 'Java','PostgreSQL','Firebase','Fast & Rest API', 'React', 'Dart', 'Web Design'],
@@ -36,7 +36,7 @@ export const PROFESSIONALS: Professional[] = [
     experience: '7+ years',
     skills: ['Administration', 'Research', 'Project Coordination', 'Communication', 'Management', 'Youth Development'],
     bio: ' Maud is a dedicated Virtual Assistant and Youth Development Professional with experience in executive support, project coordination, stakeholder engagement, and youth empowerment initiatives. She has worked with organizations across the nonprofit and development sectors, supporting operations, managing programs, and creating opportunities for young people to thrive. Passionate about leadership, education, and community impact, she combines strong organizational skills with a commitment to driving meaningful social change.',
-    LinkedIn:  'https://www.linkedin.com/in/maudfugar'
+    LinkedIn:  'https://drive.google.com/file/d/10YEVhTX0bTY1KtWzEhZJpGvOmemOnn2M/view?usp=sharing'
   },
   {
     id: 4,
@@ -56,10 +56,11 @@ export const PROFESSIONALS: Professional[] = [
     title: 'Creative Director / Designer',
     specialization: 'Creative Directing / Designing',
     description: 'Crafting visually compelling designs that communicate your brand effectively',
-    image: '/images/professionals/creative-director.jpg',
+    image: '/images/professionals/creative.png',
     experience: '5+ years',
-    skills: ['Adobe Creative Suite', 'Figma', 'Sketch', 'Branding', 'Typography', 'Visual Design'],
+    skills: ['Motion Graphics', 'Graphic Design', '3D Modelling & Animation', 'Creative Directing', 'Adobe Creative Suite', 'Figma', 'Sketch', 'Branding', 'Visual Design'],
     bio: 'Bernard is dynamic and lucrative creative professional with 5+ years of invaluable hands-on experience in creative design projects, concept creation, graphic design,2D and 3D animation and visual conceptualization. He has delivered projects for major brands including Sintex Ghana, Palace Mall, Plot Enterprise Ghana, Jumia Ghana, Munch n Dip Michigan, Clinica, The Burger Spot Michigan and Cypher Zone.',
+    LinkedIn:  'https://1drv.ms/f/c/9353be76eebaf3af/IgAdS3iGbIzGQa4OgOnU5zFwAYnT3DitPWGIPoePENGu0O0?e=mRT9Oh'
   }
 ]
 
@@ -67,14 +68,14 @@ export const SERVICES: Service[] = [
   {
     id: 1,
     icon: 'CheckCircle',
-    title: 'Project Management',
-    description: 'Custom applications and software solutions tailored to your needs'
+    title: 'Project Management & Automation',
+    description: 'Professional oversight to ensure projects stay on track'
   },
   {
     id: 2,
      icon: 'Code2',
     title: 'Software and Web Development',
-    description: 'Professional oversight to ensure projects stay on track'
+    description: 'Custom applications and software solutions tailored to your needs'
   },
   {
     id: 3,
@@ -85,7 +86,7 @@ export const SERVICES: Service[] = [
   {
     id: 4,
     icon: 'BarChart3',
-    title: 'Data Analysis',
+    title: 'Data Analysis and Business Intelligence',
     description: 'Data-driven insights to optimize your business operations'
   },
   {
@@ -99,7 +100,7 @@ export const SERVICES: Service[] = [
 export const COMPANY_INFO = {
   name: 'G-Tech Freelancers',
   tagline: 'Outsourcing Excellence, Delivering Results',
-  mission: 'To provide exceptional, cost-effective solutions by connecting businesses with top-tier professionals across software & web development, project management, data analysis, and virtual assistance.',
+  mission: 'To provide exceptional, cost-effective solutions by connecting businesses, teams and individuals with top-tier professionals across Software & Web development, Project Management & Automation, Data Analysis & Business Intelligence, Creative Designing & Directing and virtual assistance.',
   vision: 'To be the trusted partner for businesses seeking reliable, skilled professionals to execute their projects with precision and excellence.',
   values: [
     'Excellence in execution',
@@ -154,5 +155,11 @@ export const TESTIMONIALS = [
     author: "David Martinez, Executive Director at Analytics Pro",
     image: '/images/professionals/data-analyst.jpg',
     alt: "David Martinez"
+  },
+  {
+    quote: " Good is an understatement. Bernard from G-Tech freelancers is exceptional. From the design concept through to the printing is on a different level.",
+    author: "Reginald, Marketing Executive at Plot Enterprise Ghana",
+    image: '/images/professionals/data-analyst.jpg',
+    alt: "Reginald"
   }
 ]

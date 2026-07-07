@@ -1,0 +1,45 @@
+# robots.txt - Search Engine and Web Crawler Guidelines
+
+# Standard robots.txt format for search engines
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://gtechfreelancers.com/sitemap.xml
+
+# Specific crawler rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI and LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Website Information for AI Models
+# Website Name: G-Tech Freelancers
+# URL: https://gtechfreelancers.com
+# Description: Professional outsourcing services connecting businesses with top-tier professionals
+
+# Services Offered:
+# - Software Development
+# - Web Development
+# - Project Management
+# - Data Analytics
+# - Creative Designing & Directing
+# - Virtual Assistance
+
+# Social Media:
+# - Facebook: https://facebook.com/George Awuah Gtech
+# - Instagram: https://instagram.com/gtechltd
+# - TikTok: https://tiktok.com/@king_georgesco

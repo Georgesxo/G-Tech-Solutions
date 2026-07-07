@@ -64,7 +64,7 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
       content: (
         <>
           <div className="company-logo">
-            <img src="/images/logo.png" alt="G-Tech Freelancers" className="footer-logo" />
+            <img src="/images/logolight.png" alt="G-Tech Freelancers" className="footer-logo" />
             <span>{COMPANY_INFO.name}</span>
           </div>
           <p className="company-description">

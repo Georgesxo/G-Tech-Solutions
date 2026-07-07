@@ -30,6 +30,78 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 767px) {
+  .header-container {
+    padding: 0 10px;
+    height: 56px;
+  }
+
+  .logo-section {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-right: 6px;
+    overflow: hidden;
+  }
+
+  .logo {
+    gap: 5px;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .logo-image {
+    width: 62px;
+    height: 40px;
+  }
+
+  .mobile-header-actions {
+    margin-left: auto;
+    flex-shrink: 0;
+    gap: 5px;
+  }
+
+  .mobile-cta {
+    padding: 6px 10px !important;
+    font-size: 0.66rem !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-nav-header {
+    padding: 8px 14px;
+    height: 56px; /* keep overlay header same compact height as main header */
+    align-items: center;
+    overflow: visible; /* allow logo to visually overflow without expanding header */
+  }
+
+  .mobile-nav-logo {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .mobile-nav-logo-image {
+    width: auto;
+    height: 48px; /* base size */
+    max-width: none;
+    max-height: 88px;
+    object-fit: contain;
+    flex-shrink: 0;
+    transform: scale(1.4); /* visually enlarge without affecting layout */
+    transform-origin: left center;
+    transition: transform 120ms ease;
+    display: block;
+  }
+
+  .mobile-nav-logo-name {
+    font-size: 0.88rem;
+    line-height: 1.1;
+  }
+}
  
 .header--scrolled {
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
@@ -59,8 +131,8 @@
 }
  
 .logo-image {
-  width: 36px;
-  height: 36px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   border-radius: 8px;
   flex-shrink: 0;
@@ -69,8 +141,13 @@
 .company-name {
   font-size: 1rem;
   font-weight: 700;
-  color: #0d1b2e;
   white-space: nowrap;
+  /* gradient text: primary -> secondary */
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
  
 /* ============================================================
@@ -178,15 +255,15 @@
  
 /* FIX #1 — logo image and name now row, not stacked */
 .mobile-nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;                         /* ← image + text on the SAME LINE */
+    display: flex;
+    align-items: center;
+    gap: 25px;                         /* increased gap so the name is pushed away from the logo */
   text-decoration: none;
 }
  
 .mobile-nav-logo-image {
-  width: 34px;
-  height: 34px;
+  width: 88px;
+  height: 60px;
   object-fit: contain;
   border-radius: 8px;
   flex-shrink: 0;
@@ -195,8 +272,14 @@
 .mobile-nav-logo-name {
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
   white-space: nowrap;
+  margin-left: 4px; /* small additional separation */
+  /* gradient text matching site colors */
+  background: linear-gradient(90deg, #3b82f6 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
  
 .mobile-nav-close {

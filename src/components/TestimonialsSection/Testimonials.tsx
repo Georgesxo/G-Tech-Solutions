@@ -44,7 +44,7 @@ export function Testimonials() {
           </motion.h2>
 
           <motion.p className="testimonials-subtitle" variants={staggerItem}>
-            Real feedback from businesses we've partnered with and helped succeed
+            Real feedback from businesses we have partnered with and helped succeed
           </motion.p>
         </motion.div>
 

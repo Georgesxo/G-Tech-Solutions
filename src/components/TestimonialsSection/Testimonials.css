@@ -81,7 +81,7 @@
   letter-spacing: -0.02em;
   color: #0a0f1e !important;
   margin: 0 0 1rem 0;
-  font-family: 'Outfit', system-ui, sans-serif;
+  font-family: var(--font-heading);
 }
 
 .gradient-text {
@@ -100,7 +100,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
 }
 
@@ -166,6 +166,10 @@
 }
 
 /* ── Text Styling in Scroll Reel ── */
+.testimonials-content [role="region"] p {
+  font-family: 'Amaranth', 'Segoe UI', sans-serif;
+}
+
 .scroll-reel-char {
   animation: charRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;

@@ -174,7 +174,7 @@ export function ContactSection() {
             </motion.h2>
 
             <motion.p className="contact-intro" variants={staggerItem}>
-              Have a project in mind? We'd love to discuss how our team of professionals
+              Have a project in mind? We would love to discuss how our team of professionals
               can help bring your ideas to life. Reach out and let's get started.
             </motion.p>
           </motion.div>

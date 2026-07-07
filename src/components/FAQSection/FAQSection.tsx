@@ -11,7 +11,7 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: 'What services does G-Tech Freelancers provide?',
-    answer: 'We support businesses with tailored digital solutions, including website & software development, product & project strategy, technical implementation, Creative designing & directing, Data analysis & Business intelligence, Virtual assistance and ongoing support to help teams launch and grow with confidence.'
+    answer: 'We support businesses, teams and individuals with tailored digital solutions, including Website & Software development, Product & Project strategy, Technical implementation, Creative Designing & Directing, Data analysis & Business intelligence, Virtual assistance and ongoing support to help teams launch and grow with confidence.'
   },
   {
     question: 'Can you work within my budget?',
@@ -27,7 +27,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'What type of clients do you typically work with?',
-    answer: 'We work with founders, growing businesses, and teams that need dependable support for digital projects, product execution, and operational improvements.'
+    answer: 'We work with founders, growing businesses, teams and individuals that need dependable support for Digital Projects, Product Execution, Business Intelligence, Software Applications and Operational Improvements.'
   },
   {
     question: 'How do I get started?',

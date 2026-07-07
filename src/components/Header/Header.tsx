@@ -64,7 +64,7 @@ export function Header({
             onClick={(e) => { e.preventDefault(); navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }}
           >
             <img src="/images/logo.png" alt="G-Tech Freelancers Logo" className="logo-image" />
-            <span className="company-name">G-Tech Freelancers</span>
+            {!isMobile && <span className="company-name">G-Tech Freelancers</span>}
           </a>
         </div>
 
@@ -98,7 +98,7 @@ export function Header({
                     }}
                   >
                     <img
-                      src="/images/logo.png"
+                      src="/images/logolight.png"
                       alt="G-Tech Freelancers Logo"
                       className="mobile-nav-logo-image"
                     />

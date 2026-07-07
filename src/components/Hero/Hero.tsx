@@ -144,7 +144,7 @@ export function Hero({ onGetStartedClick }: HeroProps) {
           {[
             { icon: <Briefcase size={20} />, number: '50+', label: 'Projects Delivered' },
             { icon: <Users size={20} />, number: '45+', label: 'Happy Clients' },
-            { icon: <Award size={20} />, number: '4', label: 'Specialties' },
+            { icon: <Award size={20} />, number: '5', label: 'Specialties' },
             { icon: <TrendingUp size={20} />, number: '95%', label: 'Satisfaction' },
           ].map((stat, i) => (
             <motion.div key={i} style={{ display: 'contents' }}>
