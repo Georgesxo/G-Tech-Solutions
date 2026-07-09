@@ -41,7 +41,7 @@ export function TermsOfServicePage({
               <h2>Acceptance of Terms</h2>
               <p>
                 These Terms and Conditions ("Terms") govern your access to and use of{' '}
-                <a href="https://gtech.vercel.app">https://gtech.vercel.app</a> (the "Site"),
+                <a href="https://www.gtechfreelancers.com">https://www.getchfreelancers.com</a> (the "Site"),
                 operated by G-Tech Freelancers ("G-Tech," "we," "us," or "our"). By accessing
                 or using the Site, you agree to be bound by these Terms. If you do not agree,
                 please do not use the Site.
@@ -79,8 +79,8 @@ export function TermsOfServicePage({
             <section>
               <h2>Professional Services</h2>
               <p>
-                G-Tech Freelancers provides professional services including software and web
-                development, virtual assistance, data analytics, and project management. Any
+                G-Tech Freelancers provides professional services including Software & Web
+                development, Virtual assistance, Data analytics & Business intelligence,Project management & Automation and Creative designing & directing. Any
                 engagement for these services is governed by a separate written agreement between
                 you and G-Tech Freelancers. The Site is for informational purposes only and does
                 not constitute an offer or commitment to provide services.

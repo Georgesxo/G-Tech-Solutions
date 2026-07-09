@@ -261,10 +261,12 @@
   text-align: center;
   margin-bottom: 3.5rem;
   padding: 0 var(--spacing-xl);
+  margin-top: -2%;
 }
 
 .mvv-header h2 {
   margin: 1rem 0 0.75rem;
+   margin-top: 1%;
 }
 
 .mvv-description {
@@ -398,6 +400,7 @@
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
   text-align: center;
+   margin-top: -2%;
 }
 
 .wcu-container h2 {
@@ -565,6 +568,7 @@
 
   .mvv-header {
     padding: 0 var(--spacing-lg);
+     margin-top: -4%;
   }
 
   /* WCU Section */

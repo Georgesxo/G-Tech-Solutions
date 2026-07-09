@@ -3,14 +3,14 @@ import type { Professional, Service } from '../types'
 export const PROFESSIONALS: Professional[] = [
   {
     id: 1,
-    name: 'Vickie Aziabah ',
+    name: 'Victoria Aziabah ',
     title: 'Senior Project Manager',
     specialization: 'Project Management',
     description: 'Expert in delivering projects on time and within budget ',
     image: '/images/professionals/project-manager.png',
     experience: '8+ years',
     skills: ['Agile', 'Scrum', 'Team Leadership', 'Risk Management', 'Stakeholder Communication'],
-    bio: 'Vickie is a PMP-certified Digital Project Manager with 8+ years of experience managing marketing campaigns, digital operations, and cross-functional teams across telecoms and NGOs. She has delivered projects for brands like MTN, Vodafone, UNICEF, Unilever, and USAID.',
+    bio: 'Victoria is a PMP-certified Digital Project Manager with 8+ years of experience managing marketing campaigns, digital operations, and cross-functional teams across telecoms and NGOs. She has worked with clients locally and internationally from the US and Canada. She has delivered projects for brands like MTN, Vodafone, UNICEF, Unilever,and USAID.',
     LinkedIn: 'https://www.linkedin.com/in/victoria-aziabah'
   },
   
@@ -60,7 +60,7 @@ export const PROFESSIONALS: Professional[] = [
     experience: '5+ years',
     skills: ['Motion Graphics', 'Graphic Design', '3D Modelling & Animation', 'Creative Directing', 'Adobe Creative Suite', 'Figma', 'Sketch', 'Branding', 'Visual Design'],
     bio: 'Bernard is dynamic and lucrative creative professional with 5+ years of invaluable hands-on experience in creative design projects, concept creation, graphic design,2D and 3D animation and visual conceptualization. He has delivered projects for major brands including Sintex Ghana, Palace Mall, Plot Enterprise Ghana, Jumia Ghana, Munch n Dip Michigan, Clinica, The Burger Spot Michigan and Cypher Zone.',
-    LinkedIn:  'https://1drv.ms/f/c/9353be76eebaf3af/IgAdS3iGbIzGQa4OgOnU5zFwAYnT3DitPWGIPoePENGu0O0?e=mRT9Oh'
+    LinkedIn: 'https://1drv.ms/f/c/9353be76eebaf3af/IgAdS3iGbIzGQa4OgOnU5zFwAWExQstlSB6-1_naKU6yR4k'
   }
 ]
 

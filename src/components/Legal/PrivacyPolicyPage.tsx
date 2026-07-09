@@ -43,7 +43,7 @@ export function PrivacyPolicyPage({
               <p>
                 This Privacy Policy explains how G-Tech Freelancers ("G-Tech," "we," "us," or
                 "our") collects, uses, and shares information when you visit{' '}
-                <a href="https://gtech.vercel.app">https://gtech.vercel.app</a> (the "Site")
+                <a href="https://www.gtechfreelancers.com">https://www.gtechfreelancers.com</a> (the "Site")
                 or contact us. By using the Site, you agree to the practices described here.
                 G-Tech Freelancers is based in Accra, Ghana, West Africa.
               </p>
