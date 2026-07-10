@@ -135,15 +135,17 @@
 
   .faq-container {
     padding: 0 1rem;
+    margin-bottom: -7%;
   }
-
   .faq-header {
     margin-bottom: 1.75rem;
+    margin-top: -6%;
   }
 
   .faq-header h2 {
     font-size: 1.7rem;
     margin: 0.7rem 0 0.65rem;
+        margin-top: -2%;
   }
 
   .faq-header p {

@@ -175,6 +175,7 @@
 
   .comparison-container {
     padding: 0 1rem;
+            margin-bottom: -8%;
   }
 
   .comparison-grid {
@@ -205,4 +206,14 @@
     align-items: flex-start;
     padding: 0.9rem 1rem;
   }
+   .comparison-header {
+    margin-top: -6%;
+  }
+  .comparison-header h2 {
+  margin-top: -1%;
+}
+
+.comparison-header p {
+  margin-bottom: -3%;
+}
 }

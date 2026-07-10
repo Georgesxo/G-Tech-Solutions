@@ -112,7 +112,7 @@
   font-weight: 900;
   margin-bottom: 1.5rem;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.05em;
   color: #ffffff;
   font-family: var(--font-heading);
   animation: fadeInUp 0.8s ease 0.15s backwards;
@@ -560,6 +560,7 @@
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding: 0 var(--spacing-lg);
+        margin-bottom: -5%;
   }
 
   .mvv-card {
@@ -574,6 +575,11 @@
   /* WCU Section */
   .wcu-container {
     padding: 0 var(--spacing-lg);
+        margin-bottom: -5%;
+  }
+  .wcu-header {
+    padding: 0 var(--spacing-lg);
+     margin-top: -10%;
   }
 
   .wcu-grid.grid-cols-2 {
@@ -586,5 +592,6 @@
 
   .why-choose-us {
     padding: 4rem 0;
+      margin-top: -4%;
   }
 }
