@@ -369,6 +369,10 @@
     font-size: 1rem;
   }
 
+  .professionals-grid {
+    margin-top: -2rem;
+  }
+
   .professionals-grid.grid-cols-2 {
     grid-template-columns: 1fr;
   }

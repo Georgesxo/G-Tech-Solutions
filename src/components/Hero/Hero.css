@@ -560,26 +560,33 @@
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding: 0 var(--spacing-lg);
-        margin-bottom: -5%;
+    margin-top: -2rem;
+        margin-bottom: 5%;
   }
 
   .mvv-card {
     padding: 2rem;
+    margin-bottom: 0;
   }
 
   .mvv-header {
     padding: 0 var(--spacing-lg);
-     margin-top: -4%;
+    margin-top: -2rem;
+    margin-bottom: 3.5rem;
   }
+  .mvv-header h2 {
+   margin-top: -3%;
+}
+
 
   /* WCU Section */
   .wcu-container {
     padding: 0 var(--spacing-lg);
-        margin-bottom: -5%;
+        margin-bottom: -7%;
+
   }
   .wcu-header {
     padding: 0 var(--spacing-lg);
-     margin-top: -10%;
   }
 
   .wcu-grid.grid-cols-2 {
@@ -591,7 +598,19 @@
   }
 
   .why-choose-us {
-    padding: 4rem 0;
-      margin-top: -4%;
+    padding: 2rem 0 4rem 0;
+    margin-top: -3rem;
   }
+  
+  .wcu-container {
+    margin-top: 0;
+  }
+  
+  .wcu-container h2 {
+    margin-top: 0;
+  }
+  .wcu-subtitle {
+  margin-bottom: -4%;
+}
+
 }
