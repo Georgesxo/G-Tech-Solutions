@@ -133,10 +133,10 @@ export const SOCIAL_LINKS = {
 
 export const TESTIMONIALS = [
   {
-    quote: "G-Tech Freelancers transformed our digital operations. Their team delivered a complex project ahead of schedule with exceptional attention to detail. Highly recommended!",
-    author: "Sarah Johnson, CEO at Digital Ventures",
-    image: '/images/professionals/project-manager.jpg',
-    alt: "Sarah Johnson"
+    quote: "Daniel was recommended to me from G-Tech Freelancers to build a product and I did not regret accepting the recommendation as he did an amazing job.",
+    author: "Mohammad-Ali Abidi, CEO at AgnxtSix Ai",
+    image: '/images/professionals/web-developer.jpg',
+    alt: "Mohammad-Ali Abidi"
   },
   {
     quote: "The virtual assistance services provided by G-Tech are unparalleled. Dear Maud, thanks for your VA service. I highly appreciate your professionalism and the prompt service you have given me.",
@@ -146,20 +146,20 @@ export const TESTIMONIALS = [
   },
   {
     quote: "Victoria did a fantastic job coordinating our digital product launch activities. She reviewed the existing plan, organized the workflow and helped ensure all tasks were clearly tracked.",
-    author: "Jennifer Lee, Operations Director at Global Corp",
-    image: '/images/professionals/web-developer.jpg',
-    alt: "Jennifer Lee"
+    author: "Matthew Smith, CEO at Kortex Labs",
+    image: '/images/professionals/project-manager.jpg',
+    alt: "Matthew Smith"
   },
   {
-    quote: "The data analysis and insights provided by G-Tech helped us optimize our business strategy. Their recommendations drove a 40% improvement in operational efficiency.",
-    author: "David Martinez, Executive Director at Analytics Pro",
+    quote: " As community experience lead I was looking for a talented data analyst who could build an intuitive dashboard to manage the community and luckily I found wisdom from G-Tech Freelancers who executed the project perfectly .",
+    author: "Emmanuel Boakye Ababio, Community Experience lead at ALX Africa",
     image: '/images/professionals/data-analyst.jpg',
-    alt: "David Martinez"
+    alt: "Emmanuel Boakye Ababio"
   },
   {
     quote: " Good is an understatement. Bernard from G-Tech freelancers is exceptional. From the design concept through to the printing is on a different level.",
-    author: "Reginald, Marketing Executive at Plot Enterprise Ghana",
-    image: '/images/professionals/data-analyst.jpg',
-    alt: "Reginald"
+    author: "William Schmitz, CEO at Munch n Dip Michigan",
+    image: '/images/professionals/Creative-designer.jpg',
+    alt: "William Schmitz"
   }
 ]
