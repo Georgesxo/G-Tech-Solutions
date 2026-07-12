@@ -2,6 +2,20 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
+// Add this helper function at the top of the file, above the handler:
+const sanitize = (str: string) =>
+  str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+
+// Then wrap every user input in the HTML template:
+// Instead of ${name} use ${sanitize(name)}
+// Instead of ${email} use ${sanitize(email)}
+// Instead of ${subject} use ${sanitize(subject)}
+// Instead of ${message} use ${sanitize(message)}
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -15,12 +29,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-   const { data, error } = await resend.emails.send({
-      // Replace yourdomain.com with your verified domain once Resend confirms it
-      from: 'onboarding@resend.dev',
+ const { data, error } = await resend.emails.send({
+      from: 'GTech Contact Form <contact@gtechfreelancers.com>',
       to: ['gtechfreelancers@gmail.com'],
       replyTo: email,
-     subject: `${subject} `,
+      subject: `New Enquiry: ${subject} — from ${name}`,
       html: `
   <!DOCTYPE html>
   <html>
@@ -43,7 +56,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                            letter-spacing:-0.5px;">
                   GTech Freelancers
                 </h1>
-                
               </td>
             </tr>
 
@@ -62,7 +74,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                         From
                       </span>
                       <p style="margin:4px 0 0;color:#111;font-size:15px;font-weight:600;">
-                        ${name}
+                        ${sanitize(name)}
                       </p>
                     </td>
                   </tr>
@@ -73,9 +85,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                         Email
                       </span>
                       <p style="margin:4px 0 0;">
-                        <a href="mailto:${email}"
+                        <a href="mailto:${sanitize(email)}"
                            style="color:#00d4aa;font-size:15px;text-decoration:none;">
-                          ${email}
+                          ${sanitize(email)}
                         </a>
                       </p>
                     </td>
@@ -87,7 +99,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                         Subject
                       </span>
                       <p style="margin:4px 0 0;color:#111;font-size:15px;">
-                        ${subject}
+                        ${sanitize(subject)}
                       </p>
                     </td>
                   </tr>
@@ -101,17 +113,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 <div style="background:#f8f9fa;border-left:3px solid #00d4aa;
                             border-radius:0 8px 8px 0;padding:20px 24px;">
                   <p style="margin:0;color:#333;font-size:15px;line-height:1.7;
-                            white-space:pre-wrap;">${message}</p>
+                            white-space:pre-wrap;">${sanitize(message)}</p>
                 </div>
 
                 <!-- Reply CTA -->
                 <div style="margin-top:32px;text-align:center;">
-                  <a href="mailto:${email}?subject=Re: ${subject}"
+                  <a href="mailto:${sanitize(email)}?subject=Re: ${sanitize(subject)}"
                      style="display:inline-block;background:#00d4aa;color:#000;
                             font-weight:700;font-size:14px;padding:14px 32px;
                             border-radius:8px;text-decoration:none;
                             letter-spacing:0.3px;">
-                    ↩ Reply to ${name}
+                    ↩ Reply to ${sanitize(name)}
                   </a>
                 </div>
               </td>
@@ -123,9 +135,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                          border-top:1px solid #eee;text-align:center;">
                 <p style="margin:0;color:#aaa;font-size:12px;">
                   Sent via contact form at
-                  <a href="https://g-tech-solutions-theta.vercel.app"
+                  <a href="https://gtechfreelancers.com"
                      style="color:#00d4aa;text-decoration:none;">
-                    g-tech-solutions-theta.vercel.app
+                    gtechfreelancers.com
                   </a>
                 </p>
               </td>
@@ -138,8 +150,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   </body>
   </html>
 `,
-    })
-    if (error) {
+  })
+ if (error) {
   console.error('[Resend error]', error)
   return res.status(500).json({ ok: false, error: error.message })
 }
