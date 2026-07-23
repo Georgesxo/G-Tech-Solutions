@@ -27,7 +27,7 @@ User-agent: anthropic-ai
 Allow: /
 
 # Website Information for AI Models
-# Website Name: G-Tech Freelancers
+# Website Name: GTech Freelancers
 # URL: https://gtechfreelancers.com
 # Description: Professional outsourcing services connecting businesses with top-tier professionals
 

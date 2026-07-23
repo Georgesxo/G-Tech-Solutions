@@ -63,8 +63,8 @@ export function Header({
             className="logo"
             onClick={(e) => { e.preventDefault(); navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }}
           >
-            <img src="/images/logo.png" alt="G-Tech Freelancers Logo" className="logo-image" />
-            {!isMobile && <span className="company-name">G-Tech Freelancers</span>}
+            <img src="/images/logo.png" alt="GTech Freelancers Logo" className="logo-image" />
+            {!isMobile && <span className="company-name">GTech Freelancers</span>}
           </a>
         </div>
 
@@ -99,10 +99,10 @@ export function Header({
                   >
                     <img
                       src="/images/logolight.png"
-                      alt="G-Tech Freelancers Logo"
+                      alt="GTech Freelancers Logo"
                       className="mobile-nav-logo-image"
                     />
-                    <span className="mobile-nav-logo-name">G-Tech Freelancers</span>
+                    <span className="mobile-nav-logo-name">GTech Freelancers</span>
                   </a>
                   <button
                     className="mobile-nav-close"
@@ -152,7 +152,7 @@ export function Header({
                       handleNavClick(() => navigateTo(() => scrollTo('why')))
                     }}
                   >
-                    Why G-Tech
+                    Why GTech
                   </a>
 
                   <a
@@ -228,7 +228,7 @@ export function Header({
                 navigateTo(() => scrollTo('why'))
               }}
             >
-              Why G-Tech
+              Why GTech
             </a>
 
             <a href="#professionals" onClick={(e) => { e.preventDefault(); navigateTo(onProfessionalsClick) }}>Our Team</a>

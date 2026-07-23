@@ -41,11 +41,11 @@ export function PrivacyPolicyPage({
             <section>
               <h2>Overview</h2>
               <p>
-                This Privacy Policy explains how G-Tech Freelancers ("G-Tech," "we," "us," or
+                This Privacy Policy explains how GTech Freelancers ("GTech," "we," "us," or
                 "our") collects, uses, and shares information when you visit{' '}
                 <a href="https://www.gtechfreelancers.com">https://www.gtechfreelancers.com</a> (the "Site")
                 or contact us. By using the Site, you agree to the practices described here.
-                G-Tech Freelancers is based in Accra, Ghana, West Africa.
+                GTech Freelancers is based in Accra, Ghana, West Africa.
               </p>
             </section>
 
@@ -112,7 +112,7 @@ export function PrivacyPolicyPage({
                   hosting providers, analytics services, and communication platforms.
                 </li>
                 <li>
-                  <strong>Professional team members</strong> when you engage G-Tech for
+                  <strong>Professional team members</strong> when you engage GTech for
                   services.
                 </li>
                 <li>
@@ -187,7 +187,7 @@ export function PrivacyPolicyPage({
                 <a href="mailto:gtechfreelancers@gmail.com">
                   gtechfreelancers@gmail.com
                 </a>{' '}
-                or write to G-Tech Freelancers, Accra, Ghana, West Africa.
+                or write to GTech Freelancers, Accra, Ghana, West Africa.
               </p>
             </section>
           </div>

@@ -98,7 +98,7 @@ export const SERVICES: Service[] = [
 ]
 
 export const COMPANY_INFO = {
-  name: 'G-Tech Freelancers',
+  name: 'GTech Freelancers',
   tagline: 'Outsourcing Excellence, Delivering Results',
   mission: 'To provide exceptional, cost-effective solutions by connecting businesses, teams and individuals with top-tier professionals across Software & Web development, Project Management & Automation, Data Analysis & Business Intelligence, Creative Designing & Directing and virtual assistance.',
   vision: 'To be the trusted partner for businesses seeking reliable, skilled professionals to execute their projects with precision and excellence.',
@@ -133,13 +133,13 @@ export const SOCIAL_LINKS = {
 
 export const TESTIMONIALS = [
   {
-    quote: "Daniel was recommended to me from G-Tech Freelancers to build a product and I did not regret accepting the recommendation as he did an amazing job.",
+    quote: "Daniel was recommended to me from GTech Freelancers to build a product and I did not regret accepting the recommendation as he did an amazing job.",
     author: "Mohammad-Ali Abidi, CEO at AgnxtSix Ai",
     image: '/images/professionals/web-developer.jpg',
     alt: "Mohammad-Ali Abidi"
   },
   {
-    quote: "The virtual assistance services provided by G-Tech are unparalleled. Dear Maud, thanks for your VA service. I highly appreciate your professionalism and the prompt service you have given me.",
+    quote: "The virtual assistance services provided by GTech are unparalleled. Dear Maud, thanks for your VA service. I highly appreciate your professionalism and the prompt service you have given me.",
     author: "Nadege Amizero, Environmental Consultant at Global Center on Adaptation",
     image: '/images/professionals/VA testimonial.jpg',
     alt: "Nadege Amizero"
@@ -151,13 +151,13 @@ export const TESTIMONIALS = [
     alt: "Matthew Smith"
   },
   {
-    quote: " As community experience lead I was looking for a talented data analyst who could build an intuitive dashboard to manage the community and luckily I found wisdom from G-Tech Freelancers who executed the project perfectly .",
+    quote: " As community experience lead I was looking for a talented data analyst who could build an intuitive dashboard to manage the community and luckily I found wisdom from GTech Freelancers who executed the project perfectly .",
     author: "Emmanuel Boakye Ababio, Community Experience lead at ALX Africa",
     image: '/images/professionals/data-analyst.jpg',
     alt: "Emmanuel Boakye Ababio"
   },
   {
-    quote: " Good is an understatement. Bernard from G-Tech freelancers is exceptional. From the design concept through to the printing is on a different level.",
+    quote: " Good is an understatement. Bernard from GTech freelancers is exceptional. From the design concept through to the printing is on a different level.",
     author: "William Schmitz, CEO at Munch n Dip Michigan",
     image: '/images/professionals/Creative-designer.jpg',
     alt: "William Schmitz"

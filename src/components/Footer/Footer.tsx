@@ -64,7 +64,7 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
       content: (
         <>
           <div className="company-logo">
-            <img src="/images/logolight.png" alt="G-Tech Freelancers" className="footer-logo" />
+            <img src="/images/logolight.png" alt="GTech Freelancers" className="footer-logo" />
             <span>{COMPANY_INFO.name}</span>
           </div>
           <p className="company-description">
@@ -83,7 +83,7 @@ export function Footer({ onNavigateTo, onNavigateHome }: FooterProps) {
           <li><a href="#hero" onClick={(e) => { e.preventDefault(); navigateTo(() => window.scrollTo({ top: 0, behavior: 'smooth' })) }}>Home</a></li>
           <li><a href="#about" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('about')) }}>About US</a></li>
           <li><a href="#services" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('services')) }}>Services</a></li>
-          <li><a href="#why" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('why')) }}>Why G-Tech</a></li>
+          <li><a href="#why" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('why')) }}>Why GTech</a></li>
           <li><a href="#professionals" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('professionals')) }}>Our Team</a></li>
           <li><a href="#contact" onClick={(e) => { e.preventDefault(); navigateTo(() => scrollTo('contact')) }}>Contact</a></li>
         </ul>

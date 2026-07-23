@@ -10,7 +10,7 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'What services does G-Tech Freelancers provide?',
+    question: 'What services does GTech Freelancers provide?',
     answer: 'We support businesses, teams and individuals with tailored digital solutions, including Website & Software development, Product & Project strategy, Technical implementation, Creative Designing & Directing, Data analysis & Business intelligence, Virtual assistance and ongoing support to help teams launch and grow with confidence.'
   },
   {
@@ -36,7 +36,7 @@ const faqs: FAQItem[] = [
 ]
 
 export function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <section className="faq-section" id="faq">

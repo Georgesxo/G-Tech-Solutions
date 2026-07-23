@@ -53,7 +53,7 @@ export function SitemapPage({
       icon: <Users size={24} />,
       links: [
         { label: 'Our Team', id: 'professionals', onClick: () => scrollTo('professionals') },
-        { label: 'Why G-Tech', id: 'why', onClick: () => scrollTo('why') },
+        { label: 'Why GTech', id: 'why', onClick: () => scrollTo('why') },
       ]
     },
     {
@@ -90,7 +90,7 @@ export function SitemapPage({
 
           <div className="legal-page-content sitemap-page-content">
             <p className="sitemap-intro">
-              Welcome to the G-Tech Freelancers sitemap. Below is a comprehensive list of all
+              Welcome to the GTech Freelancers sitemap. Below is a comprehensive list of all
               major pages and sections on our website.
             </p>
 

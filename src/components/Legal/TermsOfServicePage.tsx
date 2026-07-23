@@ -42,7 +42,7 @@ export function TermsOfServicePage({
               <p>
                 These Terms and Conditions ("Terms") govern your access to and use of{' '}
                 <a href="https://www.gtechfreelancers.com">https://www.getchfreelancers.com</a> (the "Site"),
-                operated by G-Tech Freelancers ("G-Tech," "we," "us," or "our"). By accessing
+                operated by GTech Freelancers ("GTech," "we," "us," or "our"). By accessing
                 or using the Site, you agree to be bound by these Terms. If you do not agree,
                 please do not use the Site.
               </p>
@@ -70,7 +70,7 @@ export function TermsOfServicePage({
               <h2>Intellectual Property</h2>
               <p>
                 The Site and all content on it, including text, graphics, logos, design, and
-                software, are owned by G-Tech Freelancers or its licensors and are protected by
+                software, are owned by GTech Freelancers or its licensors and are protected by
                 intellectual property laws. You may not copy, reproduce, distribute, or create
                 derivative works from the Site without our prior written consent.
               </p>
@@ -79,10 +79,10 @@ export function TermsOfServicePage({
             <section>
               <h2>Professional Services</h2>
               <p>
-                G-Tech Freelancers provides professional services including Software & Web
+                GTech Freelancers provides professional services including Software & Web
                 development, Virtual assistance, Data analytics & Business intelligence,Project management & Automation and Creative designing & directing. Any
                 engagement for these services is governed by a separate written agreement between
-                you and G-Tech Freelancers. The Site is for informational purposes only and does
+                you and GTech Freelancers. The Site is for informational purposes only and does
                 not constitute an offer or commitment to provide services.
               </p>
             </section>
@@ -132,7 +132,7 @@ export function TermsOfServicePage({
             <section>
               <h2>Limitation of Liability</h2>
               <p>
-                To the fullest extent permitted by law, G-Tech Freelancers and its founders,
+                To the fullest extent permitted by law, GTech Freelancers and its founders,
                 employees, and contractors will not be liable for any indirect, incidental,
                 special, consequential, or punitive damages, or any loss of profits, data, or
                 goodwill, arising from your use of or inability to use the Site.
@@ -142,7 +142,7 @@ export function TermsOfServicePage({
             <section>
               <h2>Indemnification</h2>
               <p>
-                You agree to indemnify and hold harmless G-Tech Freelancers and its founders,
+                You agree to indemnify and hold harmless GTech Freelancers and its founders,
                 employees, and contractors from any claims, damages, liabilities, and expenses
                 arising out of your use of the Site or your violation of these Terms.
               </p>
@@ -182,7 +182,7 @@ export function TermsOfServicePage({
                 <a href="mailto:gtechfreelancers@gmail.com">
                   gtechfreelancers@gmail.com
                 </a>{' '}
-                or write to G-Tech Freelancers, Accra, Ghana, West Africa.
+                or write to GTech Freelancers, Accra, Ghana, West Africa.
               </p>
             </section>
           </div>
